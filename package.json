@@ -1,6 +1,6 @@
 {
   "name": "file-path-traversal-guard-utils",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Checks file paths remain inside a root directory, blocking ../ and symlink escapes",
   "type": "module",
   "main": "src/index.js",
