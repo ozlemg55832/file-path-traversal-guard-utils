@@ -56,3 +56,10 @@ On Windows, paths use `\` as the separator. The `normalize` function converts ba
 | `assertPathSafe`  | `(root: string, target: string) => void`    | Throws if unsafe. |
 
 No third-party dependencies. Node.js standard library only.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
